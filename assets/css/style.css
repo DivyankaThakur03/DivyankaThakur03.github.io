@@ -78,7 +78,24 @@ a:hover {
   font-weight: 300;
   line-height: 1.1;
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
 
+.col-md-6 {
+  flex: 0 0 50%; /* Take up 50% width on medium+ screens */
+  max-width: 50%;
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 100%; /* Full width on smaller screens */
+    max-width: 100%;
+  }
+}
 .avatar {
   width: 32px;
   height: 32px;
